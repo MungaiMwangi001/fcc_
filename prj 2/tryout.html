@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documention Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>PROBABILITY AND STATISTICS</header>
+        <ul>
+            <li>
+                <a  class="nav-link" href="#Introduction">Introduction</a>
+            </li>
+
+            <li>
+                <a  class="nav-link" href="#RANDOM_VARIABLES">RANDOM VARIABLES</a>
+            </li>
+            <li>
+                <a  class="nav-link" href="#Continuous_Random_Variables">Continuous Random Variables</a>
+            </li>
+            <li>   
+                 <a  class="nav-link" href="#Distribution_Function">Distribution Function</a>
+            </li>
+            <li>
+                <a  class="nav-link" href="#Expectation_and_Variance">Expectation and Variance</a>
+            </li>
+        </ul>
+
+    </nav>
+   <main id="main-doc">
+    <section  class="main-section" id="Introduction">
+        <header>
+            <h2>Introduction</h2></header>
+        <article>
+            <p>
+                <strong>Purpose</strong> By the end of the course the student should be able to solve problems involving 
+probability distributions of a discrete or a continuous random variable.
+                
+            </p>
+
+            <p>
+                <strong>Objectives</strong>
+                By the end of this course the student should be able to;
+
+                <ol>
+                    <li>Define the probability mass, density and distribution functions, and to use these to 
+                        determine expectation, variance, percentiles and mode for a given distribution</li>
+                        <li>
+                            Appreciate the form of the probability mass functions for the binomial, geometric, 
+hyper-geometric and Poisson distributions, and the probability density functions for the 
+uniform, exponential, gamma , beta and normal, functions, and their applications
+
+                        </li>
+                        <li>
+                            Apply the moment generating function and transformation of variable techniques
+                        </li>
+                        <li>
+                            Apply the principles of statistical inference for one sample problems.
+                        </li>
+
+                </ol>
+
+            </p>
+
+            <p>
+                <h3>DESCRIPTION</h3>  
+                Random variables: discrete and continuous, probability mass, density and distribution 
+functions, expectation, variance, percentiles and mode. Moments and moment generating 
+function. Moment generating function and transformation Change of variable technique for 
+univariate distribution. Probability distributions: hyper-geometric, binomial, Poisson, uniform, 
+normal, beta and gamma. Statistical inference including one sample normal and t tests     
+            </p>
+
+
+        </article>
+    </section>
+
+    <section  class="main-section" id="RANDOM_VARIABLES">
+        <header> <h2>RANDOM VARIABLES</h2></header>
+
+        <p>
+            In application of probability, we are often interested in a number associated with the outcome 
+            of a  random experiment. Such a quantity whose value is determined by the outcome of a 
+            random experiment is called a <strong>random variable</strong>. It can also be defined as any quantity or 
+            attribute whose value varies from one unit of the population to another.
+            A <strong>discrete</strong> random variable is function whose range is finite and/or countable, Ie it can only 
+            assume values in a finite or countably infinite set of values. A <strong>continuous</strong> random variable is 
+            one that can take any value in an interval of real numbers. (There are uncountably many real 
+            numbers in an interval of positive length.) 
+        </p>
+
+        <p>
+            <h2>Discrete Random Variables and Probability Mass Function               
+            </h2>
+            Consider the experiment of flipping a fair coin three times. The number of tails that appear is 
+noted as a discrete random variable. X= number of tails that appear in 3 flips of a fair coin.
+There are 8 possible outcomes of the experiment: namely the sample space consists of <br>
+
+<code>
+    <ul>
+        <li> S = {HHH, HHT,HTH, HTT,THH,THT,TTH,TTT}</li>
+        <li>X ={ 0 1, 1 , 2 , 1, 2 , 2 , 3}</li>
+    </ul>
+   
+     
+   
+</code>
+<br>
+<br>
+are the corresponding values taken by the random variable X.
+Now, what are the possible values that X takes on and what are the probabilities of X taking a 
+particular value?
+
+        </p>
+
+        <p>
+            From the above we see that the possible values of X are the 4 values
+ 
+ <br>           <code>X =0,1, 2, 3 </code>
+ <br>
+Ie the sample space is a disjoint union of the 4 events {X = j } for j=0,1,2,3 
+Specifically in our example:
+<br>
+<code>
+    {X=0} = {HHH}
+
+{X =2}= {TTH, HTT, THT X 3= TTT}
+</code>
+
+
+
+        </p>
+
+
+    </section>
+
+    <section  class="main-section" id="Continuous_Random_Variables">
+        <header><h1>Continuous Random Variables</h1></header>
+        <article>
+            <p>
+                A continuous random variable can assume any value in an interval on the real line or in a 
+collection of intervals. The sample space is uncountable. For instance, suppose an experiment 
+involves observing the arrival of cars at a certain period of time along a highway on a 
+particular day. </p>
+
+<p>Let T denote the time that lapses before the 1st arrival, then T is a continuous 
+random variable that assumes values in the interval 
+[0,A continuous random variable can assume any value in an interval on the real line or in a 
+collection of intervals. The sample space is uncountable. For instance, suppose an experiment 
+involves observing the arrival of cars at a certain period of time along a highway on a 
+particular day. Let T denote the time that lapses before the 1st arrival, then T is a continuous 
+random variable that assumes values in the interval 
+[0,]</p>
+           
+           <p>
+            To illustrate the concept of a probability density function, consider a histogram with unequal 
+class widths. Frequency density is plotted on the vertical axis, whether
+<br>
+frequency density = frequency/class width
+
+           </p>
+        </article>
+    </section>
+
+    <section  class="main-section" id="Distribution_Function">
+        <header><h2>Distribution Function</h2></header>
+        <p> <i>Definition:</i>  For any random variable X, we define the <strong>cumulative distribution function (CDF)</strong>,
+        <br>
+    <code>
+        F(x)
+as
+ 
+
+
+
+
+
+
+
+  
+
+
+
+
+f(t)dt If X is continuous
+P(T t ) If X is discrete
+
+    </code>
+    <br>
+    
+        Here t is introduced to facilitate summation /integration//
+    </p>
+
+    <h3>Properties of any cumulative distribution function</h3>
+    <ul>
+        <li>lim F( ) 1 and lim F( ) 0</li>
+        <li>F(x)
+            is a non-decreasing function.</li>
+            <li>
+                F(x)is a right continuous function of x. In other words 
+lim F(t)=F(x )
+
+            </li>
+
+    </ul>
+    <p>
+        <strong>Reminder</strong>
+         If the cdf of X is 
+F(x)
+and the pdf is 
+f(x)
+, then differentiate F(x) to get f(x), and 
+integrate 
+f(x)
+to get 
+F(x)
+;
+<br>
+
+ <strong>Theorem:</strong> For any random variable X and real values a < b, Pa  X  b F(b)- F(a)
+    </p>
+    </section>
+    
+
+    <section  class="main-section" id="Expectation_and_Variance">
+        <header><h2>Expectation and Variance</h2></header>
+        <article>
+            <header><h4>Expected Values</h4></header>
+            <p>
+                One of the most important things we'd like to know about a random variable is: what value 
+                does it take on average? What is the average price of a computer? What is the average value 
+                of a number that rolls on a die? The value is found as the average of all possible values, 
+                weighted by how often they occur (i.e. probability) 
+            </p>
+
+            <p>
+                <i>Definition:</i>  Let X be a random variable with probability distribution
+                p(X  x) . Then the 
+                expected value of X, denoted
+                E(X) or 
+                , is given by; <br>
+
+                <code>
+                    E( )
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+xp X x dx
+xp X
+                </code>
+                <br>
+                
+            </p>
+
+            <p>
+                <strong>
+                    Theorem:
+                </strong> let t X be a r.v. with probability distribution
+                p(X  x)
+                . Then
+                <ol>
+                    <li>E(c) = c, where c is an arbitrary constant.</li>
+                    <li>
+                        Eax  b a b
+                        where a and b are arbitrary constants</li>
+                        <li>
+                            
+Ekg(x) kEg(x)
+where g(x) is a function of X
+                        </li>
+                        <li>
+                            
+Eag (x) g (x) Eg (x) Eg (x) 1 b 2  a 1 b 2
+ and in general 
+   
+
+                        </li>
+                </ol>
+                are functions of X. This property of expectation is called linearity property
+            </p>
+        </article>
+    </section>
+
+   </main>
+    
+</body>
+</html>
