@@ -7,7 +7,16 @@ const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:$|\s)/i;
 const stockRegex = /(?:^|\s)[s5][t7][o0][c{[(]k [a@4]l[e3]r[t7](?:$|\s)/i;
 const dearRegex = /(?:^|\s)d[e3][a@4]r fr[i1|][e3]nd(?:$|\s)/i;
-
+//const phoneRegex = /^(1\s?)?(\([0-9]{3}\)|[0-9]{3})[\s\-]?[0-9]{3}[\s\-]?[0-9]{4}$/;
+/*
+const countryCode = '^(1\\s?)?';
+  const areaCode = '(\\([0-9]{3}\\)|[0-9]{3})';
+  const spacesDashes = '[\\s\\-]?';
+  const phoneNumber = '[0-9]{3}[\\s\\-]?[0-9]{4}$';
+  const phoneRegex = new RegExp(
+    `${countryCode}${areaCode}${spacesDashes}${phoneNumber}`
+  );
+*/
 const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex, dearRegex];
 
 const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
