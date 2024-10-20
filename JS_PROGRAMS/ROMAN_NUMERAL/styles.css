@@ -8,7 +8,8 @@
     --blue-50: #198eee;
     --error: #a94442;
     --danger-color: #850000;
-    --danger-background: #ffadad;
+    --danger-background: #805656;
+    --better-background: #8057;
   }
   
   *,
@@ -24,7 +25,7 @@
     padding: 50px 20px;
     font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 18px;
-    background-color: var(--gray-85);
+    background-color:var(--danger-background);
     color: var(--gray-05);
   }
   
@@ -35,10 +36,7 @@
     justify-content: center;
   }
   
-  .freecodecamp-logo {
-    height: 30px;
-    margin-bottom: 20px;
-  }
+  
   
   h1 {
     text-align: center;
@@ -117,7 +115,7 @@
   
   .alert {
     font-size: 2rem;
-    background-color: var(--danger-background);
+    background-color:var(--better-background) ;
     border: 3px solid var(--danger-color);
     color: var(--danger-color);
   }

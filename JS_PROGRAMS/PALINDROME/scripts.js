@@ -1,40 +1,45 @@
-const userInput = document.getElementById('text-input');
-const checkPalindromeBtn = document.getElementById('check-btn');
-const resultDiv = document.getElementById('result');
+// Get DOM elements
+const userInput = document.getElementById("text-input");
+const checkpldBtn = document.getElementById("check-btn");
+const resultDiv = document.getElementById("result");
 
-const checkForPalindrome = input => {
-  const originalInput = input; // Store for later output
+// Palindrome check function
+const checkWhetherPalindrome = (input) => {
+    const originalInput = input;
 
-  if (input === '') {
-    alert('Please input a value');
-    return;
-  }
+    // Check for empty input
+    if (originalInput.trim() === '') {
+        alert("Please input a value");
+        return;
+    }
 
-  // Remove the previous result
-  resultDiv.replaceChildren();
+    // Clear previous result
+    resultDiv.innerHTML = '';
 
-  const lowerCaseStr = input.replace(/[^A-Za-z0-9]/gi, '').toLowerCase();
-  let resultMsg = `<strong>${originalInput}</strong> ${
-    lowerCaseStr === [...lowerCaseStr].reverse().join('') ? 'is' : 'is not'
-  } a palindrome.`;
+    // Clean the input and check if it's a palindrome
+    const cleanedInput = originalInput.replace(/[^A-Za-z0-9]/gi, "").toLowerCase();
+    const isPalindrome = cleanedInput === [...cleanedInput].reverse().join('');
+    const resultMsg = `<i>${originalInput}</i> ${isPalindrome ? 'is' : 'is not'} a palindrome.`;
 
-  const pTag = document.createElement('p');
-  pTag.className = 'user-input';
-  pTag.innerHTML = resultMsg;
-  resultDiv.appendChild(pTag);
+    // Create and append the result
+    const pTag = document.createElement("p");
+    pTag.className = "user-input";
+    pTag.innerHTML = resultMsg;
+    resultDiv.appendChild(pTag);
 
-  // Show the result.
-  resultDiv.classList.remove('hidden');
+    // Show the result container if hidden
+    resultDiv.classList.remove('hidden');
 };
 
-checkPalindromeBtn.addEventListener('click', () => {
-  checkForPalindrome(userInput.value);
-  userInput.value = '';
+// Event listeners for button click and Enter key press
+checkpldBtn.addEventListener('click', () => {
+    checkWhetherPalindrome(userInput.value);
+    userInput.value = '';
 });
 
-userInput.addEventListener('keydown', e => {
-  if (e.key === 'Enter') {
-    checkForPalindrome(userInput.value);
-    userInput.value = '';
-  }
+userInput.addEventListener('keydown', (e) => {
+    if (e.key === "Enter") {
+        checkWhetherPalindrome(userInput.value);
+        userInput.value = '';
+    }
 });
